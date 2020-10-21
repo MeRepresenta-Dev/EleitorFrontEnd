@@ -1,4 +1,4 @@
-![Build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRzREdGxnYWZ2SjA1U1g1SG5yRTlyUlE5UkNzSUg5VUtBUlltUnVvZG1HakFiM1NxOU5tSDJXK25QMmFFWHFMMTU4ZWp4Smpnb0xtZ0xNNGtBV2tJcEpBPSIsIml2UGFyYW1ldGVyU3BlYyI6IjdQVTBTOGdaalY0R3lNeXoiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+![Build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYVJ0OGt3cUpiRzM0Q3hSUzkyaUNtVlZRUVN2RmFGRmViM2ZscnY3WmI0UjhqamtuOEU1NUhOR1BZOWxqVU52RlhaamowZUtiSThHNlVBVERWWm90U0hJPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik4yUGxsUkRoR0pGOTVVeUkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
