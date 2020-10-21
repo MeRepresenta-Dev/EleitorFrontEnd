@@ -5,18 +5,19 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  #MeRepresenta Eleitor - Front-End
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Plataforma que auxilia na escolha do candidato que representa questões importantes para cada eleitor.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## :bolt: Quick start
 
-## 🚀 Quick start
+1.  **Principais ferramentas.**
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+  Este projeto é desenvolvido com base em 3 ferramentas:
+  - [Gatsby](https://www.gatsbyjs.com/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
 
     ```shell
     # create a new Gatsby site using the default starter
