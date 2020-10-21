@@ -1,3 +1,5 @@
+![Build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYVJ0OGt3cUpiRzM0Q3hSUzkyaUNtVlZRUVN2RmFGRmViM2ZscnY3WmI0UjhqamtuOEU1NUhOR1BZOWxqVU52RlhaamowZUtiSThHNlVBVERWWm90U0hJPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik4yUGxsUkRoR0pGOTVVeUkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
