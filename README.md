@@ -10,7 +10,7 @@ Plataforma que auxilia na escolha do candidato que representa questões importan
 
 ![Build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYVJ0OGt3cUpiRzM0Q3hSUzkyaUNtVlZRUVN2RmFGRmViM2ZscnY3WmI0UjhqamtuOEU1NUhOR1BZOWxqVU52RlhaamowZUtiSThHNlVBVERWWm90U0hJPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik4yUGxsUkRoR0pGOTVVeUkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
-## :bolt: Quick start
+## Quick start
 
 1.  **Principais ferramentas.**
 
@@ -20,10 +20,6 @@ Este projeto é desenvolvido com base em 3 ferramentas:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Testing-Library](https://testing-library.com/)
 
-  ```shell
-  # create a new Gatsby site using the default starter
-  gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-  ```
 
 1.  **Colocando pra rodar**
 
