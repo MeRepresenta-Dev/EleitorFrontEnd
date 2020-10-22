@@ -20,7 +20,6 @@ Este projeto é desenvolvido com base em 3 ferramentas:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Testing-Library](https://testing-library.com/)
 
-
 1.  **Colocando pra rodar**
 
     - Clone o projeto
@@ -33,3 +32,4 @@ Este projeto é desenvolvido com base em 3 ferramentas:
     - `yarn format` formata o código para o padrão do lint
     - `yarn test` roda os testes de unidade
     - `yarn build` gera um build do projeto
+    - `yarn component` cria um novo componente na pasta `src/components`
