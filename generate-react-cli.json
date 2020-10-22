@@ -1,6 +1,6 @@
 {
   "usesTypeScript": true,
-  "usesCssModule": true,
+  "usesCssModule": false,
   "cssPreprocessor": "style.ts",
   "testLibrary": "Testing Library",
   "component": {
