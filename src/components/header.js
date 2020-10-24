@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import Logo from "./Logo/Logo"
 import logo from "../images/logo.svg"
+import Text from './Text/Text.style'
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,6 +12,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
+    <Text color="primary">Blah</Text>
     <Logo image={logo} alt="#MeRepresenta" />
     <div
       style={{
