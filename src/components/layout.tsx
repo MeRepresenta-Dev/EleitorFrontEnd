@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import GlobalStyles from "../utils/styles/globalStyles"
 import Header from "./header"
-import { theme } from "../utils/styles/theme"
+import { customTheme } from "../utils/styles/theme"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={customTheme}>
       <>
         <GlobalStyles />
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
             padding: `0 1.0875rem 1.45rem`,
           }}
         >
+          {console.log(customTheme)}
           <main>{children}</main>
           <footer
             style={{
