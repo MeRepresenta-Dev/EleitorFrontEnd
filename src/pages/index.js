@@ -10,7 +10,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Title align="center">
-      Olá Eleitor,<br />
+      Olá Eleitor,
+      <br />
       vamos conversar?
     </Title>
     <p>Welcome to your new Gatsby site.</p>

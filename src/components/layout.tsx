@@ -15,8 +15,8 @@ import { customTheme } from "../utils/styles/theme"
 import "./layout.css"
 
 const navLinks = [
-  {link: 'http://app.merepresenta.org.br/', label: 'Início'},
-  {link: 'http://app.merepresenta.org.br/', label: 'Sobre'},
+  { link: `http://app.merepresenta.org.br/`, label: `Início` },
+  { link: `http://app.merepresenta.org.br/`, label: `Sobre` },
 ]
 
 const Layout = ({ children }) => {

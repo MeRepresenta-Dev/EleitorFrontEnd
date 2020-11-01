@@ -6,7 +6,7 @@ const StyledNavigation = styled.nav`
 
   ul {
     display: flex;
-    align-items: center;  
+    align-items: center;
     list-style: none;
     margin: 0;
   }

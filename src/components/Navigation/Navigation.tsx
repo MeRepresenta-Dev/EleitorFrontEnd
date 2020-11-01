@@ -6,7 +6,7 @@ const Navigation = ({ navList }) => (
   <StyledNavigation className="Navigation" data-testid="Navigation">
     <ul>
       {navList.map(navLink => {
-        const isInternal = !navLink.link.startsWith('http')
+        const isInternal = !navLink.link.startsWith(`http`)
         return <NavLink label={navLink.label} link={navLink.link} internal={isInternal} />
       })}
     </ul>

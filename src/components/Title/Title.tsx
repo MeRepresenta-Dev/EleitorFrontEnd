@@ -44,7 +44,9 @@ const generateLevelTitle = (level, children, size) => {
 }
 
 const Title = ({ level = `h1`, children, size = `24px`, align }: TitleProps) => (
-  <StyledTitle align={align} data-testid="Title">{generateLevelTitle(level, children, size)}</StyledTitle>
+  <StyledTitle align={align} data-testid="Title">
+    {generateLevelTitle(level, children, size)}
+  </StyledTitle>
 )
 
 export default Title
