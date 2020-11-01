@@ -5,6 +5,7 @@ const StyledText = styled.p<{ size: number; color: string; weight: number; famil
   font-family: ${props => `${props.font || props.theme.font?.primary.family}`};
   font-size: ${props => `${props.size || props.theme.font?.body}px`};
   font-weight: ${props => `${props.weight || props.theme.font?.primary.weight}`};
+  text-align: ${props => `${props.align || `left`}`};
   line-height: 120%;
 `
 

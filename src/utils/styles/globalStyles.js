@@ -12,12 +12,13 @@ const GlobalStyles = createGlobalStyle`
       margin: 0;
     }
 
-    .text-green {
-      color: #1B9AAA;
+    .contentBlock {
+      margin: 24px 0;
     }
 
-    .text-pink {
-      color: #EF476F;
+    main {
+      display: flex;
+      flex-direction: column;
     }
   }
 `
