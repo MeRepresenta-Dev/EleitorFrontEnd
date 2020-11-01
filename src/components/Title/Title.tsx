@@ -5,6 +5,7 @@ type TitleProps = {
   level: string
   children: ReactNode
   size?: string
+  align?: string
 }
 const generateLevelTitle = (level, children, size) => {
   switch (level) {
@@ -42,8 +43,8 @@ const generateLevelTitle = (level, children, size) => {
   }
 }
 
-const Title = ({ level, children, size = `24px` }: TitleProps) => (
-  <StyledTitle data-testid="Title">{generateLevelTitle(level, children, size)}</StyledTitle>
+const Title = ({ level = `h1`, children, size = `24px`, align }: TitleProps) => (
+  <StyledTitle align={align} data-testid="Title">{generateLevelTitle(level, children, size)}</StyledTitle>
 )
 
 export default Title

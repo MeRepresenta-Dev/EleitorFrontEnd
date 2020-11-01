@@ -5,8 +5,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     color: #4f4f4f;
+    
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Montserrat';
+      font-weight: 500;
       margin: 0;
     }
 

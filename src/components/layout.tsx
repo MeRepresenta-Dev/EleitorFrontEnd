@@ -10,9 +10,14 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import GlobalStyles from "../utils/styles/globalStyles"
-import Header from "./header"
+import Header from "./Header"
 import { customTheme } from "../utils/styles/theme"
 import "./layout.css"
+
+const navLinks = [
+  {link: 'http://app.merepresenta.org.br/', label: 'Início'},
+  {link: 'http://app.merepresenta.org.br/', label: 'Sobre'},
+]
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +34,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={customTheme}>
       <>
         <GlobalStyles />
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} navList={navLinks} />
         <div
           style={{
             margin: `0 auto`,
