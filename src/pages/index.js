@@ -11,7 +11,6 @@ import ThemeButton from "../components/ThemeButton"
 import Button from "../components/Button"
 import Title from "../components/Title"
 import Text from "../components/Text"
-import SEO from "../components/seo"
 
 const temas = [
   { label: `#Gênero`, name: `genero` },
@@ -56,19 +55,22 @@ const uf = [
 ]
 
 const IndexPage = () => {
-  const [temasEscolhidos, escolherTema] = useState([])
+  const [filtros, escolherFiltro] = useState({
+    search: '',
+    temasEscolhidos: [],
+    uf: ''
+  })
 
   const handleTemas = tema => {
-    const novosTemas = temasEscolhidos.includes(tema)
-      ? temasEscolhidos.filter(t => t !== tema)
-      : [...temasEscolhidos, tema]
-    escolherTema(novosTemas)
+    const novosTemas = filtros.temasEscolhidos.includes(tema)
+      ? filtros.temasEscolhidos.filter(t => t !== tema)
+      : [...filtros.temasEscolhidos, tema]
+    escolherFiltro({...filtros, temasEscolhidos: novosTemas})
   }
 
-  console.log(temasEscolhidos)
+  console.log(filtros)
   return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout seoTitle="Eleitor">
       <SearchField onSearch={console.log} />
       <div className="contentBlock">
         <Title align="center">
@@ -87,7 +89,7 @@ const IndexPage = () => {
         <div className="contentBlock">
           <FormControl fullWidth variant="outlined">
             <InputLabel style={{ backgroundColor: `#FFF` }}>Selecione um Estado</InputLabel>
-            <Select label="Selecione um Estado">
+            <Select label="Selecione um Estado" onChange={(e) => escolherFiltro({...filtros, uf: e.target.value})}>
               {uf.map(estado => (
                 <MenuItem value={estado.sigla}>{estado.nome}</MenuItem>
               ))}
@@ -107,7 +109,7 @@ const IndexPage = () => {
         </Text>
         <div className="contentBlock temas">
           {temas.map(tema => (
-            <ThemeButton name={tema.name} onChoose={handleTemas} isActive={temasEscolhidos.includes(tema.name)}>
+            <ThemeButton name={tema.name} onChoose={handleTemas} isActive={filtros.temasEscolhidos.includes(tema.name)}>
               {tema.label}
             </ThemeButton>
           ))}

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@600&family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@600&family=Open+Sans&display=swap');
 
   body {
     color: #4f4f4f;
@@ -18,8 +18,9 @@ const GlobalStyles = createGlobalStyle`
       &.temas {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
-        button:not(:nth-child(3)) {
+        button {
           margin-bottom: 5px;
           margin-right: 5px;
         }
