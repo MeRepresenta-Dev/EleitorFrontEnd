@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import FormControl from "@material-ui/core/FormControl"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
-
-import Layout from "../components/layout"
 import Select from "@material-ui/core/Select"
+
+import uf from '../utils/data/states.json'
+import cities from '../utils/data/cities.json'
+import Layout from "../components/layout"
 import SearchField from "../components/SearchField"
 import ThemeButton from "../components/ThemeButton"
 import Button from "../components/Button"
@@ -24,41 +26,15 @@ const temas = [
   { label: `#Drogas`, name: `drogas` },
 ]
 
-const uf = [
-  { sigla: `AC`, nome: `Acre` },
-  { sigla: `AL`, nome: `Alagoas` },
-  { sigla: `AP`, nome: `Amapá` },
-  { sigla: `AM`, nome: `Amazonas` },
-  { sigla: `BA`, nome: `Bahia` },
-  { sigla: `CE`, nome: `Ceará` },
-  { sigla: `DF`, nome: `Distrito Federal` },
-  { sigla: `ES`, nome: `Espírito Santo` },
-  { sigla: `GO`, nome: `Goías` },
-  { sigla: `MA`, nome: `Maranhão` },
-  { sigla: `MT`, nome: `Mato Grosso` },
-  { sigla: `MS`, nome: `Mato Grosso do Sul` },
-  { sigla: `MG`, nome: `Minas Gerais` },
-  { sigla: `PA`, nome: `Pará` },
-  { sigla: `PB`, nome: `Paraíba` },
-  { sigla: `PR`, nome: `Paraná` },
-  { sigla: `PE`, nome: `Pernambuco` },
-  { sigla: `PI`, nome: `Piauí` },
-  { sigla: `RJ`, nome: `Rio de Janeiro` },
-  { sigla: `RN`, nome: `Rio Grande do Norte` },
-  { sigla: `RS`, nome: `Rio Grande do Sul` },
-  { sigla: `RO`, nome: `Rondônia` },
-  { sigla: `RR`, nome: `Roraíma` },
-  { sigla: `SC`, nome: `Santa Catarina` },
-  { sigla: `SP`, nome: `São Paulo` },
-  { sigla: `SE`, nome: `Sergipe` },
-  { sigla: `TO`, nome: `Tocantins` },
-]
+
 
 const IndexPage = () => {
+  const [cidades, setCidades] = useState([])
   const [filtros, escolherFiltro] = useState({
     search: '',
     temasEscolhidos: [],
-    uf: ''
+    estado: '',
+    cidade: ''
   })
 
   const handleTemas = tema => {
@@ -66,6 +42,13 @@ const IndexPage = () => {
       ? filtros.temasEscolhidos.filter(t => t !== tema)
       : [...filtros.temasEscolhidos, tema]
     escolherFiltro({...filtros, temasEscolhidos: novosTemas})
+  }
+
+  const handleStates = estado => {
+    escolherFiltro({...filtros, estado})
+    const idUF = uf.filter(ufState => ufState.abbr === estado)[0].id
+    const cids = cities.filter(city => city.state_id === idUF)
+    setCidades(cids)
   }
 
   console.log(filtros)
@@ -89,12 +72,23 @@ const IndexPage = () => {
         <div className="contentBlock">
           <FormControl fullWidth variant="outlined">
             <InputLabel style={{ backgroundColor: `#FFF` }}>Selecione um Estado</InputLabel>
-            <Select label="Selecione um Estado" onChange={(e) => escolherFiltro({...filtros, uf: e.target.value})}>
+            <Select label="Selecione um Estado" onChange={(e) => handleStates(e.target.value)}>
               {uf.map(estado => (
-                <MenuItem value={estado.sigla}>{estado.nome}</MenuItem>
+                <MenuItem value={estado.abbr}>{estado.name}</MenuItem>
               ))}
             </Select>
           </FormControl>
+
+          {filtros.estado && (
+            <FormControl style={{marginTop: `24px`}} fullWidth variant="outlined">
+              <InputLabel style={{ backgroundColor: `#FFF` }}>Selecione uma Cidade</InputLabel>
+              <Select label="Selecione uma Cidade" onChange={(e) => escolherFiltro({...filtros, cidade: e.target.value})}>
+                {cidades.map(cid => (
+                  <MenuItem value={cid.name}>{cid.name}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          )}
         </div>
       </div>
       <div className="contentBlock">
