@@ -12,7 +12,7 @@ const StyledThemeButton = styled.button<{ color: string }>`
   display: flex;
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 12px;
+  font-size: 10px;
   height: 95px;
   justify-content: center;
   transition: all 0.3s ease-in-out;
