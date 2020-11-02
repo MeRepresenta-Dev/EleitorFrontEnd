@@ -7,6 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem"
 import Layout from "../components/layout"
 import Select from "@material-ui/core/Select"
 import SearchField from "../components/SearchField"
+import Button from "../components/Button"
 import Title from "../components/Title"
 import Text from "../components/Text"
 import SEO from "../components/seo"
@@ -47,6 +48,12 @@ const IndexPage = () => (
       <Text size={18} weight={300} align="center">
         Escolha um tema ou os nove temas se quiser. Descubra candidatas/os que combinam com você!
       </Text>
+      <div className="contentBlock">
+        {/* colocar os blocos de temas */}
+      </div>
+    </div>
+    <div className="contentBlock" style={{textAlign: 'center'}}>
+        <Button color="secondary">CONTINUAR</Button>
     </div>
   </Layout>
 )

@@ -18,6 +18,14 @@ const StyledButton = styled.button<{ color: string; lightText: boolean }>`
     opacity: 0.85;
   }
 
+  &.theme-button {
+    min-width: 90px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &::disabled {
     pointer-events: none;
     cursor: not-allowed;
