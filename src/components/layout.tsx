@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import GlobalStyles from "../utils/styles/globalStyles"
 import Header from "./Header"
+import Footer from "./Footer"
 import SEO from "./seo"
 import { customTheme } from "../utils/styles/theme"
 import "./layout.css"
@@ -47,6 +48,7 @@ const Layout = ({ children, seoTitle }) => {
           {console.log(customTheme)}
           <main>{children}</main>
         </div>
+        <Footer />
       </>
     </ThemeProvider>
   )

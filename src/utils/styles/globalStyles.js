@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
-    main {
+    main, footer {
       display: flex;
       flex-direction: column;
     }
