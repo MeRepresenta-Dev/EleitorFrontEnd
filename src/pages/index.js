@@ -18,7 +18,7 @@ const IndexPage = () => (
     <SearchField onSearch={console.log} />
     <div className="contentBlock">
       <Title align="center">
-        Olá Eleitor,
+        Olá Eleitor(a),
         <br />
         vamos conversar?
       </Title>
