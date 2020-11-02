@@ -14,6 +14,17 @@ const GlobalStyles = createGlobalStyle`
 
     .contentBlock {
       margin: 24px 0;
+
+      &.temas {
+        display: flex;
+        flex-wrap: wrap;
+
+        button:not(:nth-child(3)) {
+          margin-bottom: 5px;
+          margin-right: 5px;
+        }
+        
+      }
     }
 
     main {
