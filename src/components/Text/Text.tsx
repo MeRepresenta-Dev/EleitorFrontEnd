@@ -11,7 +11,15 @@ type TextProps = {
 }
 
 const ComponentText = ({ children, size, color, weight, family, align }: TextProps) => (
-  <StyledText align={align} size={size} color={color} weight={weight} family={family} className="Text" data-testid="Text">
+  <StyledText
+    align={align}
+    size={size}
+    color={color}
+    weight={weight}
+    family={family}
+    className="Text"
+    data-testid="Text"
+  >
     {children}
   </StyledText>
 )
