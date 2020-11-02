@@ -17,13 +17,14 @@ import Text from "../components/Text"
 const temas = [
   { label: `#Gênero`, name: `genero` },
   { label: `#LGBT`, name: `lgbt` },
-  { label: `#Povos Tradicionais & Meio Ambiente`, name: `povostradicionais` },
-  { label: `#Saúde, Educação & Trabalho`, name: `saudeeducacaotrabalho` },
   { label: `#Raça`, name: `raca` },
-  { label: `#Corrupção`, name: `corrupcao` },
-  { label: `#Migrantes`, name: `migrantes` },
-  { label: `#Segurança`, name: `seguranca` },
+  { label: `#Povos Tradicionais`, name: `povostradicionais` },
+  { label: `#Políticas Sociais`, name: `politicassociais` },
+  { label: `#Segurança Pública`, name: `seguranca` },
   { label: `#Drogas`, name: `drogas` },
+  { label: `#Comunicação`, name: `comunicacao` },
+  { label: `#Democracia`, name: `democracia` },
+  { label: `#Meio Ambiente`, name: `meioambiente` },
 ]
 
 
