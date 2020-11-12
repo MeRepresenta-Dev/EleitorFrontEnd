@@ -5,7 +5,6 @@ const StyledCardCandidato = styled.div`
   border-radius: 4px;
   margin: 24px 0;
   position: relative;
-  height: 200px;
 
   .card {
     display: flex;

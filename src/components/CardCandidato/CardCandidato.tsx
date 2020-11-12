@@ -11,6 +11,7 @@ type CardCandidatoProps = {
   uf: string
   cidade: string
   foto: string
+  hideButton: boolean
 }
 
 const InfoDetail = ({label, value}) => (
@@ -20,7 +21,7 @@ const InfoDetail = ({label, value}) => (
   </div>
 )
 
-const CardCandidato = ({ nome, partido, nota, uf, cidade, foto }: CardCandidatoProps) => (
+const CardCandidato = ({ nome, partido, nota, uf, cidade, foto, hideButton = false }: CardCandidatoProps) => (
   <StyledCardCandidato className="CardCandidato" data-testid="CardCandidato">
     <div className="card">
       <div className="avatar">
@@ -35,7 +36,7 @@ const CardCandidato = ({ nome, partido, nota, uf, cidade, foto }: CardCandidatoP
       </div>
     </div>
     <div className="action">
-      <Button color="secondary">Ver Perfil Completo</Button>
+      {!hideButton && (<Button color="secondary">Ver Perfil Completo</Button>)}
     </div>
   </StyledCardCandidato>
 )

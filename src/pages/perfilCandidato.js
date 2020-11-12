@@ -12,17 +12,10 @@ import Button from "../components/Button"
 import faceIcon from "../images/facebook-icon.png"
 import questionIcon from "../images/question-icon.png"
 
-const ListaCandidatosPage = () => {
+const PerfilCandidatoPage = () => {
   
   return (
-    <Layout seoTitle="Lista de Candidatos">
-      <SearchField onSearch={console.log} />
-      <div className="lista-candidatos-title">
-        <Title>Quem te representa?</Title>
-        <Text size={14} family="Lato" weight={300}>Resultado de acordo com os temas que você 
-        escolheu! Para alterar seus temas, clique aqui!</Text>
-      </div>
-      
+    <Layout seoTitle="Perfil Candidaura">      
       <div className="lista-candidatos-sub">
         <div className="lista-candidatos-qtd">
           <Text size={14} family="Lato" weight={400}><strong>37</strong> vereadores</Text>
@@ -32,40 +25,39 @@ const ListaCandidatosPage = () => {
           <Text size={14} family="Lato" weight={400}>Filtrar</Text>
         </div>
       </div>
-      <AliceCarousel
-        disableDotsControls
-        infinite
-        mouseDragEnabled
-        responsive={{ 0: { items: 1 }, 1024: { items: 3 } }}
-      >
+
         <CardCandidato
           nome={"Fabi Rodrigues"}
           partido={"perifa"}
           uf={"RJ"}
           cidade={"Rio de Janeiro"}
           nota={9.2} 
+          hideButton
           foto={"https://cdn.discordapp.com/attachments/748213396993867866/751891144979251383/IMG_20200905_154817_514.jpg"}
         />
-        <CardCandidato
-          nome={"Fabi 2"}
-          partido={"perifa"}
-          uf={"RJ"}
-          cidade={"Rio de Janeiro"}
-          nota={9.2} 
-          foto={"https://cdn.discordapp.com/attachments/748213396993867866/751891144979251383/IMG_20200905_154817_514.jpg"}
-        />
-      </AliceCarousel>
-      
-      <div className="lista-candidatos-notes">
-        <Text>E se você puder, dá <br />uma força pra gente?</Text>
 
-        <div className="lista-candidatos-actions">
-          <Button><img src={questionIcon} /></Button>
-          <Button><img src={faceIcon} /></Button>
-        </div>
+      <div className="perfil-candidato-title">
+        <Title size={16}>Um pouco sobre a/o candidata/o</Title>
+        <Text size={14} family="Lato" weight={300}>Resultado de acordo com os temas que você 
+        escolheu! Para alterar seus temas, clique aqui!</Text>
+        <Text size={12} family="Lato" weight={400}><a href="#">Continuar lendo</a></Text>
+      </div>
+
+
+      
+      <div className="perfil-candidato-title">
+        <Title size={16}>Temas prioritários</Title>
+        <span className="tema-badge"><Text size={14} family="Montserrat" weight={500}>#Raça</Text></span>
+      </div>
+
+      <div className="perfil-candidato-title">
+        <Title size={16}>Veja como a Enfermeira Bombeira Thaís se posiciona</Title>
+        <Text size={14} family="Lato" weight={300}>Resultado de acordo com os temas que você 
+        escolheu! Para alterar seus temas, clique aqui!</Text>
+        <Text size={12} family="Lato" weight={400}><a href="#">Continuar lendo</a></Text>
       </div>
     </Layout>
   )
 }
 
-export default ListaCandidatosPage
+export default PerfilCandidatoPage

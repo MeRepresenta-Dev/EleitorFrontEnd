@@ -28,6 +28,56 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
+    .tema-badge {
+      background: #FFC43D;
+      border-radius: 4px;
+      display: inline-flex;
+      padding: 6px;
+
+      p { margin: 0;}
+    }
+
+    .alice-carousel__prev-btn, 
+    .alice-carousel__next-btn{
+      position: absolute;
+      top: 50%;
+      background: #1B9AAA;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      border-radius: 100%;
+      color: #FFF;
+      justify-content: center;
+    }
+
+    .alice-carousel__prev-btn {
+      left: -15px;
+    }
+
+    .alice-carousel__next-btn {
+      right: -15px;
+    }
+
+    .lista-candidatos-title {
+      margin-top: 48px;
+      margin-bottom: 28px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .lista-candidatos-sub {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid silver;
+
+      p {
+        margin: 12px 0;
+      }
+    }
+
     .lista-candidatos-notes {
       display: flex;
       justify-content: space-between;
