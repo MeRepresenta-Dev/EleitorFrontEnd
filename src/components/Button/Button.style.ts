@@ -12,7 +12,7 @@ const StyledButton = styled.button<{ color: string; lightText: boolean }>`
   font-weight: 700;
   height: 45px;
   transition: all 0.3s ease-in-out;
-  min-width: 182px;
+  width: 182px;
 
   &:hover {
     opacity: 0.85;

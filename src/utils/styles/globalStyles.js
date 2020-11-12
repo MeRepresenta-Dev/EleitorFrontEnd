@@ -28,6 +28,31 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
+    .lista-candidatos-notes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+
+      p, img {
+        margin: 0;
+      }
+
+      .lista-candidatos-actions {
+        display: flex;
+        align-items: center;
+        .Button {
+          width: 45px !important;
+          height: 45px;
+
+          &:last-child {
+            background: #4267B2;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+
     main, footer {
       display: flex;
       flex-direction: column;

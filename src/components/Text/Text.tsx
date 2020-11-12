@@ -3,14 +3,14 @@ import StyledText from "./Text.style"
 
 type TextProps = {
   children: ReactNode
-  size: number
-  color: string
-  weight: number
-  family: string
-  align: string
+  size?: number
+  color?: string
+  weight?: number
+  family?: string
+  align?: string
 }
 
-const ComponentText = ({ children, size, color, weight, family, align }: TextProps) => (
+const Text = ({ children, size, color, weight, family, align }: TextProps) => (
   <StyledText
     align={align}
     size={size}
@@ -24,4 +24,4 @@ const ComponentText = ({ children, size, color, weight, family, align }: TextPro
   </StyledText>
 )
 
-export default ComponentText
+export default Text
